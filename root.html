@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rooter pixel 7 pro</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./matiere.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>Étapes pour rooter un Pixel 7 Pro</h1>
+    <div class="page">
+      <bloc- titre="1 Télécharger l'image OTA">
+        - PC : Se rendre sur <a href="https://developers.google.com/android/ota?hl=fr#cheetah" style="color: #f00;display: contents;">developers.google.com/android/ota</a><input type="checkbox" style="checkbox">
+        - Pixel : Aller dans les paramètres, "à propos de l'appareil", et trouver le numéro de build<input type="checkbox" style="checkbox">
+        PC : Télécharger l'image OTA correspondant exactement au numéro de build<input type="checkbox" style="checkbox">
+      </bloc->
+      <bloc- titre="2 Débloquer le bootloader">
+        - Pixel :  Activer le mode développeur<input type="checkbox" style='checkbox'>
+
+        - Pixel : Activer le débuggage USB<input type="checkbox" style="checkbox">
+
+        - Pixel : Activer le débuggage OEM<input type="checkbox" style="checkbox">
+
+        - Brancher le Pixel au PC<input type="checkbox" style="checkbox">
+
+        - PC : Choisir de le connecter à Linux<input type="checkbox" style="checkbox">
+        
+        - PC : Lancer le terminal en copiant collant cette url dans un nouvel onglet: <button onclick="copier(`chrome-untrusted://terminal/html/terminal.html?command=vmshell&args[]=--vm_name%3Dtermina&args[]=--target_container%3Dpenguin&args[]=--owner_id%3D5cbea07f2981f4aecc7dd33290fd2c3041389fe3&args[]=--cwd%3D%2Fhome%2Fthynva607%2Fplatform-tools`)" class="copier">Copier</button><input type="checkbox" style="checkbox">
+        
+        Effectuer la commande pour voir si le Pixel est identifié :<input type="checkbox" style="checkbox">
+        adb devices<button onclick="copier(`adb devices`)" class="copier">Copier</button>
+
+        - PC : Mettre le téléphone en fastboot avec la commande :<input type="checkbox" style="checkbox">
+        adb -d reboot bootloader<button onclick="copier('adb -d reboot bootloader')" class="copier">Copier</button>
+
+        - PC : Remettre la connexion à Linux et vérifier la connexion avec la commande :<input type="checkbox" style="checkbox">
+        fastboot devices<button onclick="copier(`fastboot devices`)" class="copier">Copier</button>
+
+        - PC : Débloquer le bootloader avec la commande :<input type="checkbox" style="checkbox">
+        fastboot flashing unlock<button onclick="copier(`fastboot flashing unlock`)" class="copier">Copier</button>
+
+       - PC : Relancer le téléphone avec la commande :<input type="checkbox" style="checkbox">
+        fastboot reboot<button onclick="copier(`fastboot reboot`)" class="copier">Copier</button>
+       </bloc->
+       <bloc- titre="3 Appliquer l'image OTA">
+        - Pixel : Reconfigurer pour activer le mode développeur, USB et OEM<input type="checkbox" style="checkbox">
+        - PC : Extraire deux fois l'image OTA du .zip<input type="checkbox" style="checkbox">
+
+        - PC : Aller dans le dossier "images" et copier et transférer "init_boot.img" sur le Pixel<input type="checkbox" style="checkbox">
+
+        - PC : Transférer Magisk sur le Pixel<input type="checkbox" style="checkbox">
+
+        - Pixel : Installer Magisk<input type="checkbox" style="checkbox">
+
+        - Pixel : Ouvrir Magisk<input type="checkbox" style="checkbox">
+
+        - Pixel : Cliquer sur installer en haut<input type="checkbox" style="checkbox">
+
+        - Pixel : Sélectionner init_boot.img<input type="checkbox" style="checkbox">
+
+        - Pixel : Cliquer sur "continuer"<input type="checkbox" style="checkbox">
+
+        Le fichier patché sera dans le dossier téléchargement du téléphone et devrait être nommé "magisk_patched[...].img"
+        
+        - Pixel : Ouvrir Magisk<input type="checkbox" style="checkbox">
+
+        - PC : Transférer le fichier du Pixel au PC dans le dossier platform-tools sur Linux<input type="checkbox" style="checkbox">
+
+        - Pixel : Redémarrer le téléphone, en maintenant Volume bas et Power pour le passer en mode Fastboot<input type="checkbox" style="checkbox">
+       
+        - PC : Effectuer la commande pour voir si le Pixel est toujours identifié :<input type="checkbox" style="checkbox">
+        fastboot devices<button onclick="copier(`fastboot devices`)" class="copier">Copier</button>
+
+        - PC Effectuer la commande :<input type="checkbox" style="checkbox">
+        fastboot flash init_boot magisk<button onclick="copier(`fastboot flash init_boot magisk`)" class="copier">Copier</button>
+        Et appuyer sur tab pour automatiquement trouver le fichier
+
+        Cela devrait envoyer, et écrire sur 'init_boot_a' ou 'init_boot_b' et devrait marquer 'Finished' 
+
+        Pixel : Sélectionner et appuyer sur Start<input type="checkbox" style="checkbox">
+ 
+        Le téléphone affichera un avertissement du bootloader, et devrait s'allumer normalement
+
+        Pixel : Ouvrir Magisk et vérifier si Magisk est bien installé<input type="checkbox" style="checkbox">
+       </bloc->
+    </div>
+    <script src="../script2.js"></script>
+    <script>
+    function copier(texte) {
+      // Get the text field
+
+       // Copy the text inside the text field
+      navigator.clipboard.writeText(texte);
+    
+    }</script>
+  </body>
+</html>

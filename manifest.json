@@ -1,0 +1,29 @@
+{
+  "short_name": "Léonard Rien",
+  "name": "Léonard-Rien",
+  "icons": [
+    {
+      "src": "maskable_iconx128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "maskable"
+    },
+      {
+      "src": "maskable_iconx192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    }
+      ,
+      {
+      "src": "maskable_iconx512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

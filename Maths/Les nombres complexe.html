@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maths | Les nombres complexes</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./matiere.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>Les nombres complexes</h1>
+
+<div class="page">
+<bloc->1 : Les différentes formes
+<bloc->1 : La forme algébrique
+<bloc->Définition :
+- Les nombres complexes sont tous les nombres tel que z = a +
+ib avec a et b ∈ ℝ et i²=-1</sup>
+- On dit que a +ib est la forme algébrique 
+- On a z = a +ib :  a est la partie réelle  b est la partie imaginaire
+Exemple : z = 2i-4 
+-4 est la partie réelle 
+2 est la partie imaginaire 
+- On note ℂ l'ensemble des nombres complexes
+ - On peut interpréter la géométriquement la forme algébrique de tout nombre complexe dans un repère orthonormé
+(O,I,J) le nombre complexe a + ib est représenté par son point M (a,b) On dit que a +ib est l'affixe du point M, ou du vecteur OM
+</bloc->
+</bloc->
+<bloc->2 : La forme trigonométrique
+<bloc->Définition :
+Soit z = a +ib 
+On appelle module de z, le nombre |z| ou parfois r et défini par |z| = √(a² + b²) 
+Si z est non nul, on appelle argument de z, qu'on note arg(z), toute mesure de l'angle (OI,OM) où M est le point d'affixe z 
+<img src="argument.png">
+</bloc->
+<bloc->Propriété
+Tout nombre non nul z peut s'écrire sous la forme |z|(cosθ + i sin θ) 
+On dit que z est sous forme trigonométrique 
+On a le même nombre complexe écrit sous deux formes : 
+z = a + ib 
+z = |z|(cosθ + i sin θ) 
+On a alors :  
+a = |z|cos(θ)  
+b = |z|sin(θ) 
+|z| = √(a²+b²)
+cos θ = a/|z|
+sin θ = b/|z|
+</bloc->
+</bloc->
+<bloc->3 : La forme exponentielle
+<bloc->Définition
+Pour tout réel θ, on appelle exponentielle complexe d'argument θ cosθ + i sin θ, noté e<sup>iθ</sup>
+En particulier, le module de e<sup>iθ</sup> est 1 et un de ses arguments est θ
+</bloc->
+</bloc->
+<bloc->Propriété
+Tout nombre complexe non nul de module |z| et d'argument arg(z) peut s'écrire sous la forme e<sup>iθ</sup></bloc->
+</bloc->
+<bloc->2 : La propriété algébrique
+<bloc->1 : la forme exponentielle
+On admet les exponentielles complexes sont similaires à celles des exponentielles réelles.
+<bloc->Propriété
+Avec θ et Θ des réels et n entier naturel
+1) e<sup>iθ</sup> × e<sup>iΘ</sup> = e<sup>i(θiΘ)</sup> 
+
+2) e<sup>iθ</sup> / e<sup>iΘ</sup> = e<sup>i(θ-Θ)</sup>
+
+3) (e<sup>iθ</sup>)<sup><sup>n</sup></sup> = e<sup>inθ</sup>
+</bloc->
+</bloc->
+<bloc->2 : La formule d'addition et de duplication en trigonométrie
+Formules d'addition : 
+Pour tous réels θ et Θ : 
+    
+cos(θ+Θ)= cos(θ) * cos(Θ) - sin(θ) * sin(Θ) "Les 2 cos - les 2 sin"
+sin(θ+Θ)= sin(θ) * cos(Θ) + cos(Θ) * sin(Θ) "Cos sin + cos sin"
+
+Remarques : Si Θ = θ :
+cos(2θ)= cos²θ - sin²θ
+sin(2θ)= 2sin(θ)*cos(θ)
+
+Formules de duplication :
+
+cos(2θ) = cos²θ - sin²θ
+cos(2θ) = 2cos²θ - 1
+sin(2θ) = 2sinθ cosθ
+cos(2θ) = 1 - sin²θ
+</bloc->
+<bloc->Les transformations du plan
+Une transformation du plan associe un point M à un un point M'. Soit M d'affize z et M' d'affixe z' dans un plan rapporté à un repère orthonormé d'origine 0.
+L'expression de cette transformation est alors la fonction f de ₵ dans L'expression de cette transformation est alors la fonction f de ₵ dans ₵ telle que f(z) = z'.
+
+<bloc->1 Translation
+  Soit u un vecteur et M et M' deux points d'affixe z et z'.
+  On dit que M' est l'image de M par la translation de vecteur u à MM' = u
+
+  <table>
+    <tr>
+      <th>Transformation du plan</th>
+      <th>Expression complexe</th>
+      <th>Illustration</th>
+    </tr>
+    <tr>
+      <th>Translation de vecteur u d'affixe b
+        M(z)-> M'(z')
+      </th>
+      <th>f(z)=z+b</th>
+      <th>*vecteur*</th>
+
+  
+    </tr>
+  </table>
+</bloc->
+<bloc->2 Homothéties
+ Soit a un réel non nul et M et M' deux points. On dit que M' est l'image de M par l'homothétie de centre 0 et de rapport a si
+ OM' = OM × a
+  <table>
+    <tr>
+      <th>Transformation du plan</th>
+      <th>Expression complexe</th>
+      <th>Illustration</th>
+    </tr>
+    <tr>
+      <th>Homothétie de centre O et de rapport a
+        M(z) -> M'(z)
+      </th>
+      <th>f(z)=z × a</th>
+      <th>*vecteur*</th>
+    </tr>
+  </table>
+</bloc->
+<bloc->3 Rotation
+ Soit θ un nombre réel non nul et M et M' deux points d'affixe z et z' dans un plan (θ,i,j) orthonormé avec M ≠ 0 et M' ≠ 0.
+ On dit que M' est l'image de M par la rotation de centre O et d'angle θ si OM = OM' et l'angle (OM;OM') = θ[2π]
+  <table>
+    <tr>
+      <th>Transformation du plan</th>
+      <th>Expression complexe</th>
+      <th>Illustration</th>
+    </tr>
+    <tr>
+      <th>Rotation de centre 0 et d'angle θ.
+        M(z) -> M(z')
+      </th>
+      <th>e<sup>iθ</sup>× z</th>
+      <th>*vecteur*</th>
+    </tr>
+  </table>
+</bloc->
+</div>
+    <script src="../scriptcopy.js"></script>
+  </body>
+</html>
