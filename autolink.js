@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', '/pages', true);
+  xhr.open('GET', '/', true); // Accéder à la racine du projet
   xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
-          var pages = JSON.parse(xhr.responseText);
-          pages.forEach(function(page) {
+          var files = JSON.parse(xhr.responseText);
+          files.forEach(function(file) {
               var link = document.createElement('a');
-              link.href = './' + page; // Ajouter l'extension .html ici si nécessaire
-              link.textContent = page.replace('.html', ''); // Retirer l'extension .html du texte du lien
+              link.href = './' + file; // Ajouter l'extension .html ici si nécessaire
+              link.textContent = file.replace('.html', ''); // Retirer l'extension .html du texte du lien
               
-              // Trouver le dossier parent en fonction du chemin de la page
-              var parentFolder = getParentFolder(page);
+              // Trouver le dossier parent en fonction du nom du fichier
+              var parentFolder = getParentFolder(file);
               if (parentFolder) {
                   // Déterminer le bloc parent en fonction du dossier de la page
                   var parentBlock = determineParentBlock(parentFolder);
@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
                       console.error("Aucun bloc parent trouvé pour le dossier : ", parentFolder);
                   }
               } else {
-                  console.error("Impossible de trouver le dossier parent pour la page : ", page);
+                  console.error("Impossible de trouver le dossier parent pour le fichier : ", file);
               }
           });
       }
   };
   xhr.send();
 
-  // Fonction pour extraire le dossier parent à partir du chemin de la page
-  function getParentFolder(page) {
-      var parts = page.split("/");
+  // Fonction pour extraire le dossier parent à partir du nom du fichier
+  function getParentFolder(file) {
+      var parts = file.split("/");
       if (parts.length >= 2) {
           return parts[1]; // Le deuxième élément du chemin après le './'
       } else {
