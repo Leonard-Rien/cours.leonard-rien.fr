@@ -1,0 +1,19 @@
+{
+  "name": "cours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "autolink.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leonard-rien/cours.leonard-rien.fr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leonard-rien/cours.leonard-rien.fr/issues"
+  },
+  "homepage": "https://github.com/Leonard-rien/cours.leonard-rien.fr#readme"
+}
