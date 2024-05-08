@@ -3,13 +3,13 @@
   "name": "Cours | Léonard-Rien",
   "icons": [
     {
-      "src": "logo512.png",
+      "src": "logo-cours512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     },
       {
-      "src": "logo192.png",
+      "src": "logo-cours192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
