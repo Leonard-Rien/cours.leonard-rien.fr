@@ -9,20 +9,36 @@ document.addEventListener('DOMContentLoaded', function () {
               link.href = './' + page; // Ajouter l'extension .html ici si nécessaire
               link.textContent = page.replace('.html', ''); // Retirer l'extension .html du texte du lien
               
-              // Déterminer le bloc parent en fonction du dossier de la page
-              var parentBlock = determineParentBlock(page);
-              if (parentBlock) {
-                  parentBlock.appendChild(link);
+              // Trouver le dossier parent en fonction du chemin de la page
+              var parentFolder = getParentFolder(page);
+              if (parentFolder) {
+                  // Déterminer le bloc parent en fonction du dossier de la page
+                  var parentBlock = determineParentBlock(parentFolder);
+                  if (parentBlock) {
+                      parentBlock.appendChild(link);
+                  } else {
+                      console.error("Aucun bloc parent trouvé pour le dossier : ", parentFolder);
+                  }
               } else {
-                  console.error("Aucun bloc parent trouvé pour la page : ", page);
+                  console.error("Impossible de trouver le dossier parent pour la page : ", page);
               }
           });
       }
   };
   xhr.send();
 
+  // Fonction pour extraire le dossier parent à partir du chemin de la page
+  function getParentFolder(page) {
+      var parts = page.split("/");
+      if (parts.length >= 2) {
+          return parts[1]; // Le deuxième élément du chemin après le './'
+      } else {
+          return null;
+      }
+  }
+
   // Fonction pour déterminer le bloc parent en fonction du dossier de la page
-  function determineParentBlock(page) {
+  function determineParentBlock(folder) {
       // Créer un objet de correspondance entre les dossiers et les classes de bloc
       var folderToBlockClass = {
           "Maths": "bloc_Maths",
@@ -30,13 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
           // Ajouter d'autres correspondances si nécessaire
       };
 
-      // Extraire le nom du dossier à partir du chemin de la page
-      var folderName = page.split("/")[1]; // Le premier élément du chemin après le './'
-
       // Vérifier si le dossier a une correspondance de classe de bloc
-      if (folderToBlockClass.hasOwnProperty(folderName)) {
+      if (folderToBlockClass.hasOwnProperty(folder)) {
           // Trouver l'élément bloc avec la classe correspondante
-          return document.querySelector('.' + folderToBlockClass[folderName]);
+          return document.querySelector('.' + folderToBlockClass[folder]);
       } else {
           return null; // Aucun bloc parent trouvé
       }
