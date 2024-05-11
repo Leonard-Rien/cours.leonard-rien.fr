@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const accordionItemBodies = document.querySelectorAll(".bloc-body");
 

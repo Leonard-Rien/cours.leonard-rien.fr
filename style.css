@@ -3,8 +3,6 @@
   font-display: swap;
   src: url(undertale-deltarune-text-font-extended.ttf);
 }
-
-
 .Leonard_Rien{
   font-family: 'undertale';
   font-weight: 100;
@@ -16,11 +14,8 @@
   font-size:min(2rem,4vw);
 }
 
-
 .header {
-  
   background-color: var(--couleur_fond1);
- 
   color: var(--couleur_texte); /* Couleur du texte */
   font-size: 1.5em;
   text-align: center;
@@ -31,10 +26,10 @@
   border-bottom: solid min(0.5vw, 1px) #222;
   height: var(--hauteur_header);
   display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 1s, color 1s, border 1s;
-    }
+  align-items: center;
+  justify-content: center;
+  transition: background 1s, color 1s, border 1s;
+  }
 
     .contenu-header {
       width:min(95vw,1200px);
@@ -306,12 +301,6 @@ white-space-collapse: collapse;
   text-align-last: center;
 }
 
-
-
-
-
-
-
 embed{
   margin-top:50px;
   width: 100%;
@@ -320,24 +309,6 @@ embed{
   background-color:#000;
 }
 
-
-/*@media (prefers-color-scheme: light) {
-  :root {
-    --couleur_texte: #000000;
-    --couleur_fond1: #eeeeee;
-    --couleur_fond2: #e8e8e8;
-    --couleur_fond3: #ffffff;
-    --primary: #000000;
-    --secondary: #a8a8a8;
-    --accent: #11ff00;
-  }
-  .coeur 
-    content: url('coeur_noir.webp'); /* Image spécifique pour le thème sombre 
-  }
-  .header {
-    border-bottom: solid 1px var(--couleur_fond2);
-  }
-}*/
 @media (prefers-color-scheme: dark) {
   :root {
     --couleur_texte: #ffffff;
