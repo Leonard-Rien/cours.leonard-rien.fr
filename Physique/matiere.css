@@ -9,6 +9,5 @@ body {
 }
 
 .bloc-body.active{
-  border-top: 1px solid;
   border-image: linear-gradient(90deg, #ff3300 0%, #ff9900) 100;
 }
