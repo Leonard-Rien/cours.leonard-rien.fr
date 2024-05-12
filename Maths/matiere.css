@@ -1,4 +1,14 @@
 body {
-  background-image: linear-gradient(90deg, #f1ff00 0%, #fff100 100%);
-  
+  background-image: linear-gradient(90deg, #ff9100 0%, #e5ff00);
+}
+
+.bloc-header{
+  background: -webkit-linear-gradient(0deg, #ff9100 0%, #e5ff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bloc-body.active{
+  border-top: 1px solid;
+  border-image: linear-gradient(90deg, #ff9100 0%, #e5ff00) 100;
 }

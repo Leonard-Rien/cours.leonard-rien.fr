@@ -55,6 +55,12 @@ body {
   background-color:#000;
 /*background-image: linear-gradient(270deg, #F00 0%, #bb00ff 100%);*/
   color: #fff;
+  --couleur_texte: #ffffff;
+  --couleur_fond1: #000;
+  --couleur_fond2: #181818;
+  --couleur_fond3: #333;
+  --primary: #ffffff;
+
   --hauteur_header:min(60px,12vw);
   --hauteur_message_et_bouton_envoyer: min(15vw,75px);
   --largeur_bouton_envoyer: min(30vw,150px);
@@ -172,7 +178,7 @@ td {
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 .bloc_Philo .bloc {
-  background: linear-gradient(180deg, #9dff00 0%, #00ff80);
+  background: linear-gradient(180deg, #bbff00 0%, #00ff73);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 .bloc_Anglais .bloc {
@@ -190,16 +196,16 @@ td {
 
 
 
-.bloc_EE .bloc .bloc-body, 
-.bloc_SIN .bloc .bloc-body,
-.bloc_ITEC .bloc .bloc-body,
-.bloc_PC .bloc .bloc-body,
-.bloc_Maths .bloc .bloc-body,
-.bloc_Philo .bloc .bloc-body,
-.bloc_Anglais .bloc .bloc-body,
-.bloc_Histoire .bloc .bloc-body,
-.bloc_Espagnol .bloc .bloc-body{
- /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 75%, rgba(255, 255, 255, 0) 100%);*/
+.bloc_EE .bloc .bloc-body.active, 
+.bloc_SIN .bloc .bloc-body.active,
+.bloc_ITEC .bloc .bloc-body.active,
+.bloc_PC .bloc .bloc-body.active,
+.bloc_Maths .bloc .bloc-body.active,
+.bloc_Philo .bloc .bloc-body.active,
+.bloc_Anglais .bloc .bloc-body.active,
+.bloc_Histoire .bloc .bloc-body.active,
+.bloc_Espagnol .bloc .bloc-body.active{
+  border-top: 1px solid #000000;
 }
 
 
@@ -240,10 +246,10 @@ td {
   justify-content: center;
   /*position: relative;*/
   cursor: pointer;
- 
+
   border-radius: 20px;
   background-color:#00000000;
-  color: #fff;
+ 
   border: none;
   width:100%;
   font-size: min(4vw,1.5em);
@@ -289,7 +295,6 @@ white-space-collapse: collapse;
 }
 
 .bloc-body.active{
-  border-top: 1px solid #000000;
   line-height: 1.5rem;
   white-space-collapse: collapse;
   transition: max-height 0.2s ease-out, border 0.3s ;
@@ -311,30 +316,4 @@ embed{
   height:1200px;
   border-radius: 20px;
   background-color:#000;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --couleur_texte: #ffffff;
-    --couleur_fond1: #000;
-    --couleur_fond2: #1a1a1a;
-    --couleur_fond3: #333;
-    --primary: #ffffff;
-    --secondary: #575757;
-    --accent: #11ff00;
-
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --couleur_texte: #ffffff;
-    --couleur_fond1: #000;
-    --couleur_fond2: #1a1a1a;
-    --couleur_fond3: #333;
-    --primary: #ffffff;
-    --secondary: #575757;
-    --accent: #11ff00;
-
-  }
 }
