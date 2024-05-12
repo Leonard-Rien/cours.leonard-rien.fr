@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 1s, color 1s, border 1s;
+  /*transition: background 1s, color 1s, border 1s*/;
   }
 
     .contenu-header {
@@ -52,7 +52,7 @@
 
 body {
   font-family: 'Roboto';
-  background-color: #000;
+  background-color:#000;
 /*background-image: linear-gradient(270deg, #F00 0%, #bb00ff 100%);*/
   color: #fff;
   --hauteur_header:min(60px,12vw);
@@ -83,7 +83,8 @@ input{
 
 a {
   text-decoration: underline;
-  color: #000;
+  
+  color: #000000;
 width: 100%;
 display:flex;
 justify-content: center;
@@ -94,7 +95,7 @@ justify-content: center;
 
 .copier{
   margin-left: 10px;
-  background: linear-gradient(90deg, #c300ff 0%, #ff0000 100%);
+  background: linear-gradient(180deg, #c300ff 0%, #ff0000 100%);
   color: #fff;
   border: 1px solid #fff;
   border-radius: 7px;
@@ -134,10 +135,7 @@ td {
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 
-.bloc_EE .bloc {
-  background-color: #bb00ff;
-  margin-top: 0; /* Supprime la marge en haut du premier élément */;
-}
+
 .bloc_EE .bloc .bloc-header, 
 .bloc_SIN .bloc .bloc-header,
 .bloc_ITEC .bloc .bloc-header,
@@ -148,58 +146,66 @@ td {
 .bloc_Histoire .bloc .bloc-header,
 .bloc_Espagnol .bloc .bloc-header
 {
-  color: #000;
+  color: #000000;
 }
-.bloc_ITEC .bloc .bloc-header {
-  color: #000;
+
+.bloc_EE .bloc {
+  background: linear-gradient(180deg, #9900ff 0%, #ff00ea);
+  margin-top: 0; /* Supprime la marge en haut du premier élément */;
 }
 .bloc_SIN .bloc {
-  background-color: #ff00d4;
+  background: linear-gradient(180deg, #ff00ea 0%, #ff0040);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 .bloc_ITEC .bloc {
-  background-color: #ff0000;
+  background: linear-gradient(180deg, #ff0040 0%, #ff4800);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 
 .bloc_PC .bloc {
-  background-color: #ff6600;
+  background: linear-gradient(180deg, #ff3300 0%, #ff7300);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 
 .bloc_Maths .bloc {
-  background-color: rgb(255, 255, 0);
+  background: linear-gradient(180deg, #ffa600 0%, #eeff00);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 .bloc_Philo .bloc {
-  background-color: #00ff00;
+  background: linear-gradient(180deg, #9dff00 0%, #00ff80);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 .bloc_Anglais .bloc {
-  background-color: #0ff;
+  background: linear-gradient(180deg, #00ff6a 0%, #00d9ff);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 .bloc_Histoire .bloc {
-  background-color: #09f;
+  background: linear-gradient(180deg, #00d9ff 0%, #0066ff);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 .bloc_Espagnol .bloc {
-  background-color:#00f;
+  background: linear-gradient(180deg, #002fff 0%, #6200ff);
   margin-top: 0; /* Supprime la marge en haut du premier élément */
 }
 
-.bloc_EE .bloc .bloc-body.active, 
-.bloc_SIN .bloc .bloc-body.active,
-.bloc_ITEC .bloc .bloc-body.active,
-.bloc_PC .bloc .bloc-body.active,
-.bloc_Maths .bloc .bloc-body.active,
-.bloc_Philo .bloc .bloc-body.active,
-.bloc_Anglais .bloc .bloc-body.active,
-.bloc_Histoire .bloc .bloc-body.active,
-.bloc_Espagnol .bloc .bloc-body.active
-{   border-top: 1px solid #000;
-color: #000;
+
+
+.bloc_EE .bloc .bloc-body, 
+.bloc_SIN .bloc .bloc-body,
+.bloc_ITEC .bloc .bloc-body,
+.bloc_PC .bloc .bloc-body,
+.bloc_Maths .bloc .bloc-body,
+.bloc_Philo .bloc .bloc-body,
+.bloc_Anglais .bloc .bloc-body,
+.bloc_Histoire .bloc .bloc-body,
+.bloc_Espagnol .bloc .bloc-body{
+ /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 75%, rgba(255, 255, 255, 0) 100%);*/
 }
+
+
+
+
+
 
 .bloc_EE .bloc .bloc-body-content, 
 .bloc_SIN .bloc .bloc-body-content,
@@ -278,17 +284,15 @@ bloc-:last-of-type {
   padding-top: 0px;
   padding-bottom: 0px;
 position: relative;
-transition: max-height 0.2s ease-out;
+transition: max-height 0.2s ease-in, border 0.3s ;
 white-space-collapse: collapse;
 }
 
 .bloc-body.active{
-  border-top: 1px solid #fff;
-  /*transition: max-height 0.2s ease-out, border-top 2s, padding-top 2s, padding-bottom 2s;
-  /*padding-top: 20px;
-  padding-bottom: 20px;*/
+  border-top: 1px solid #000000;
   line-height: 1.5rem;
   white-space-collapse: collapse;
+  transition: max-height 0.2s ease-out, border 0.3s ;
 }
 .bloc-body-content {
   line-height: 1.5rem;
