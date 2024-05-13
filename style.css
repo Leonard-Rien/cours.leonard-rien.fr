@@ -311,6 +311,7 @@ embed {
   height: min(20vw,60px);
   display: flex;
   background-image: url(retour-arriere.png);
+  cursor:pointer;
 
 }
 
