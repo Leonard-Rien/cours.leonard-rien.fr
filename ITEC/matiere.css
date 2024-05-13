@@ -11,3 +11,9 @@ body {
 .bloc-body.active{
   border-image: linear-gradient(90deg, #ff004c 0%, #ff5e00) 100;
 }
+
+
+.conteneur-titre{
+  width: min(95vw, 1200px);
+}
+
