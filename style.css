@@ -46,7 +46,7 @@
 }
 
 .fin-header {
-  height: 50px;
+  height: 80px;
 }
 
 body {
@@ -111,10 +111,6 @@ td {
   width: var(--largeur_bloc);
   margin-left: auto;
   margin-right: auto;
-}
-
-.page-index{
-  margin-top:30px;
 }
 
 .bloc {
