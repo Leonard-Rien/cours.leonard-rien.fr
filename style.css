@@ -339,3 +339,7 @@ h1{
   width: 100%;
 
 }
+
+.centrer-titre{
+ width: min(20vw, 60px);
+}
