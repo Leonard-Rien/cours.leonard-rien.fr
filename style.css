@@ -13,7 +13,7 @@
 
 .Cours_de_Terminale {
   font-size: min(2rem, 4vw);
-  font-family: 'Roboto';
+  font-family: 'Arial';
 }
 
 .header {
@@ -51,7 +51,7 @@
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Arial';
   background-color: #000;
   color: #fff;
   --couleur_texte: #ffffff;
@@ -234,7 +234,7 @@ td {
 }
 
 a {
-  font-family: 'Roboto';
+  font-family: 'Arial';
   text-decoration: underline;
   color: #000000;
 width: 100%;
@@ -289,7 +289,7 @@ bloc-:last-of-type {
 }
 
 .bloc-body-content {
-  font-family: 'Roboto';
+  font-family: 'Arial';
   line-height: 1.5rem;
   padding-bottom: 0px;
   padding-top: var(--padding1);
