@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maths | Les nombres complexes</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./matiere.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="conteneur-conteneur-titre">
+      <div class="conteneur-titre">
+        <img onclick="window.history.back()" src="../retour-arriere.png" class="retour-arriere" alt="Retour arrière" />
+      <h1>Les variables aléatoires discrètes</h1>
+      <div class="centrer-titre"></div>
+    </div>
+  </div>
+
+<div class="page">
+  <bloc->Les variables aléatoires discrètes
+<bloc->I Variables aléatoires
+<bloc->Définition d'une variable aléatoire
+Soit E l'ensemble des issues d'une expérience. On définit une variable aléatoire X sur E quand on associe à chaque issue de E un nombre réel. L'ensemble de ces réels (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ..., x<sub>n</sub>) est l'ensemble des valeurs prises par X. Dans ce cas, l'évènement :
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  X = x<sub>i</sub>
+</math> 
+est l'ensemble des issues de E auxquelles on associe le réel x<sub>i</sub> et la loi de probabilité de X est la donnée de toutes les probabilités 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  P(X = x<sub>i</sub>)
+</math>, où x<sub>i</sub> prend toutes les valeurs de E.
+</bloc->
+<bloc->Exemple :
+On lance un dé équilibré. Si le nombre obtenu est 1, on gagne 6 € ; si c'est un 2 ou un 3, on gagne 3 € ; sinon on perd 2 €. Le gain associé à cette expérience définit une variable aléatoire X.
+Les données des valeurs prises par la variable aléatoire et les probabilités associés sont souvent présentées dans un tableau : c'est la loi de probabilité de la variable aléatoire X.
+<table>
+  <tr>
+    <th>x<sub>i</sub></th>
+    <th>-2</th>
+    <th>3</th>
+    <th>6</th>
+  </tr>
+  <tr>
+    <td>P(X=x<sub>i</sub>)</td>
+    <td>1/2</td>
+    <td>1/3</td>
+    <td>1/6</td>
+  </tr>
+</table>
+</bloc->
+<bloc->Définition de l'espérance
+L'espérance d'une variable aléatoire X est le nombre réel noté E(X), défini par :
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  E(X) = p<sub>1</sub>x<sub>1</sub> + p<sub>2</sub>x<sub>2</sub> + ... + p<sub>n</sub>x<sub>n</sub>
+</math>
+</bloc->
+<bloc->Exemple :
+Dans la situation précédente, 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  E(X) = 1/2 * (-2) + 1/3 * 3 + 1/6 * 6 = -1 + 1 + 1 = 1
+</math>.
+Si l'on joue un grand nombre de fois, le gain moyen par jeu est de 1€.
+</bloc->
+</bloc->
+
+<bloc->II Loi binomiale
+<bloc->Définition
+Soit n un entier positif et p un réel de l'intervalle [0;1].
+On considère une expérience aléatoire à deux issues S que l'on nomme succès de probabilité p et S̅ que l'on nomme échec de probabilité q=1-p. On répète n fois cette expérience que l'on nomme épreuve de Bernoulli de façon identique et indépendante.
+Soit X la variable aléatoire comptant le nombre de succès obtenus. On dit que X suit une loi binomiale de paramètre n et p. On la note B(n,p).
+</bloc->
+<bloc->Exemple :
+On lance trois fois de suite un dé bien équilibré et on note X le nombre de 6 obtenus. X suit la loi binomiale de paramètres n=3 et de probabilité 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  p=1/6
+</math>. Pour de petites valeurs de n, on représente cette répétition d'épreuves de Bernoulli identiques et indépendante par un arbre pondéré, et on peut ainsi calculer des probabilités. Par exemple : pour le calcul de 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  P(X=1)
+</math> :
+</bloc->
+</bloc->
+</bloc->
+</div>    
+    <script src="../scriptcopy.js"></script>
+  </body>
+</html>
